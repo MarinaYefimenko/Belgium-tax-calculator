@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style/style.css">
+    <title>Tax calculator</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Belgium tax calculator</h1>
+
+        <form class="main__form" action="taxes.php" method="post">
+            <section class="salary">
+                <div class="section__header salary__header">1. Enter your month salary:</div>
+                <div class="slidecontainer">
+                    <div class="salaryslider">
+                        <input type="range" min="1" max="4000" value="1000" class="slider" id="slider-salary">
+                    </div>
+                    <input type="text" id="salary" class="input__value">
+                    <div class="units">&#x20AC</div>
+                </div>
+                <div class="note">
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Exercitationem tenetur error iusto
+                    expedita soluta! Non fuga iure, autem itaque corporis quos adipisci atque maiores quaerat, omnis
+                    tempore? Fuga, doloribus necessitatibus.
+                </div>
+
+            </section>
+
+            <section class="incomes">
+                <div class="section__header incomes__header">2. Enter your month extra incomes:</div>
+                <div class="incomes__inner">
+                    <div class="income income__realestate">
+                        <label>
+                            <input type="checkbox" name="realestate" value="realestate">
+                            Incomes from realestate
+                        </label>
+                        <input type="text" id="realestate" class="input__value">
+                        <div class="units">&#x20AC / month</div>
+                    </div>
+                    <div class="income income__pension">
+                        <label>
+                            <input type="checkbox" name="pension" value="pension">
+                            Pension
+                        </label>
+                        <input type="text" id="pension" class="input__value">
+                        <div class="units">&#x20AC / month</div>
+                    </div>
+                    <div class="income income__securities">
+                        <label>
+                            <input type="checkbox" name="securities" value="securities">
+                            Incomes from securities
+                        </label>
+                        <input type="text" id="securities" class="input__value">
+                        <div class="units">&#x20AC / month</div>
+                    </div>
+                </div>
+                <div class="note">
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Exercitationem tenetur error iusto
+                    expedita soluta! Non fuga iure, autem itaque corporis quos adipisci atque maiores quaerat, omnis
+                    tempore? Fuga, doloribus necessitatibus.
+                </div>
+            </section>
+
+            <section class="dependents">
+                <div class="section__header dependents__header">3. Do you have supported dependents:</div>
+                <div class="dependents__inner">
+                    <div class="dependents__answers">
+                        <div class="dependents__answer answer__active dependents__yes">YES</div>
+                        <div class="dependents__answer dependents__no">NO</div>
+                    </div>
+                    <div class="dependents__count">
+                        <div class="count children">
+                            <div>Children:</div>
+                            <select id="children" class="children__select">
+                                <option selected value="0">0</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3 and more</option>
+                            </select>
+                            <div class="units">persons</div>
+                        </div>
+                        <div class="count disabled">
+                            <div>Disabled:</div>
+                            <select id="disabled" class="disabled__select">
+                                <option selected value="0">0</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3 and more</option>
+                            </select>
+                            <div class="units">persons</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="note">
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Exercitationem tenetur error iusto
+                    expedita soluta! Non fuga iure, autem itaque corporis quos adipisci atque maiores quaerat, omnis
+                    tempore? Fuga, doloribus necessitatibus.
+                </div>
+            </section>
+
+            
+    
+    <section class="other-additionally">
+        <div class="section__header other__header">4. Additionally for full year:</div>
+        <div class="other__inner">
+            <div class="other other__charity">
+                <label>
+                    <input type="checkbox" name="charity" value="charity">
+                    Charitable contributions:
+                </label>
+                <input type="text" id="charity" class="input__value">
+                <div class="units">&#x20AC / year</div>
+            </div>
+            <div class="other other__energy">
+                <label>
+                    <input type="checkbox" name="energy" value="energy">
+                    Spending on energy-saving technologies
+                </label>
+                <input type="text" id="energy" class="input__value">
+                <div class="units">&#x20AC / year</div>
+            </div>
+        </div>
+        <div class="note">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Exercitationem tenetur error iusto
+            expedita soluta! Non fuga iure, autem itaque corporis quos adipisci atque maiores quaerat, omnis
+            tempore? Fuga, doloribus necessitatibus.
+        </div>
+    </section>
+   </form>
+
+<button class="calculate">Сalculate</button>
+<section class="result">
+    <div class="result__text">You have to pay tax for the year in the amount of</div>
+    <input type="text" id="result" class="result__value">
+    <div class="units result__units">&#x20AC</div>
+</section>
+
+    <footer>
+        <div class="note note__footer">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Exercitationem tenetur error iusto
+            expedita soluta! Non fuga iure, autem itaque corporis quos adipisci atque maiores quaerat, omnis
+            tempore? Fuga, doloribus necessitatibus.
+        </div>
+    </footer>
+    </div>
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
