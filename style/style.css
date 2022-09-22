@@ -56,7 +56,7 @@ section {
 
 .units {
     font-family: 'Frank Ruhl Libre', serif;
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 300;
 }
 
@@ -64,7 +64,8 @@ section {
     font-family: 'Frank Ruhl Libre', serif;
     font-size: 14px;
     font-weight: 300;
-    width: 50%;
+    line-height: 1.2;
+    width: 60%;
     margin-top: 20px;
 }
 
@@ -76,6 +77,25 @@ section {
     width: 100%;
 }
 
+.btn-more {
+    padding: 10px 30px;
+    position: relative;
+    cursor: pointer;
+}
+
+.btn-more:before{
+    content:"";
+    display: block;
+    width: 10px;
+    height: 10px;
+    border-top: 2px solid #dcc776;
+    border-right: 2px solid #dcc776;
+    position: absolute;
+    top: 15px;
+    left: 10px;
+    z-index: 1;
+    transform: translateY(-50%) rotate(135deg);
+}
 
 /* Salary========================= */
 .slidecontainer {
@@ -132,6 +152,7 @@ section {
 .incomes__inner {
     padding-left: 30px;
     margin-bottom: 40px;
+    position: relative;
 }
 
 .income {
@@ -145,8 +166,48 @@ label {
     font-family: 'Frank Ruhl Libre', serif;
     font-size: 18px;
     font-weight: 400;
-    width: 50%;
+    width: 60%;
+    line-height: 1;
 }
+
+.custom-checkbox{
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+}
+
+.custom-checkbox+label {
+    display: inline-flex;
+    align-items: center;
+    user-select: none;
+  }
+  .custom-checkbox+label::before {
+    content: '';
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    flex-shrink: 0;
+    flex-grow: 0;
+    border: 1px solid #71a710;
+    margin-right: 0.5em;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 100% 100%;
+  }
+
+  .custom-checkbox:hover+label::before {
+    background-color: #fff;
+  }
+
+  .custom-checkbox:focus+label::before {
+    background-color: #fff;
+  }
+
+  .custom-checkbox:checked+label::before {
+    border-color: #71a710;
+    background-color: #71a710;
+    background-image: url("icon-check.png");
+  }
 
 
 /* Dependents ===============================*/
@@ -176,16 +237,27 @@ label {
     opacity: 1;
     background-color: #dcc776;
 }
+.dependents__count {
+    margin: 40px 0;
+}
 
 .count {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
     margin-left: 30px;
-    width: 50%;
+    width: 100%;
     font-family: 'Frank Ruhl Libre', serif;
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 300;
+}
+
+.count div {
+    width: 90%;
+}
+
+.count .units {
+    padding-left: 15px;
 }
 
 select {
@@ -197,7 +269,7 @@ select {
 
 /* Other================ */
 
-.other {
+.other__inner {
     padding-left: 30px;
     margin-bottom: 40px;
 }
@@ -207,6 +279,7 @@ select {
     justify-content: space-between;
     padding-right: 50px;
     margin-bottom: 20px;
+    position: relative;
 }
 
 /* calculate================ */
@@ -262,3 +335,13 @@ select {
     padding-bottom: 30px;
 }
 
+footer a {
+    text-decoration: none;
+    color:#71a710;
+    cursor: pointer;
+    font-weight: 400;
+}
+
+footer a:hover {
+    font-weight: 600;
+}

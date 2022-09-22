@@ -27,45 +27,52 @@
                     <div class="units">&#x20AC</div>
                 </div>
                 <div class="note">
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Exercitationem tenetur error iusto
-                    expedita soluta! Non fuga iure, autem itaque corporis quos adipisci atque maiores quaerat, omnis
-                    tempore? Fuga, doloribus necessitatibus.
+                    <div class="btn-more">More information</div>
+                    <div class="note__content">Personal income tax has progressive tax rates. This means that the higher
+                        your income is, the higher
+                        the rate of tax you pay.<br><br>
+                        The progressive tax rates for 2022 income are:<br>
+                        25 % - from EUR 0.01 to EUR 13 540<br>
+                        40 % - from EUR 13 540 to EUR 23 900<br>
+                        45 % - from EUR 23 900 to EUR 41 360<br>
+                        50 % - more than EUR 41 360.<br><br>
+                        Non-taxable amount €9 050 per tax year.</div>
                 </div>
 
             </section>
 
             <section class="incomes">
-                <div class="section__header incomes__header">2. Enter your month extra incomes:</div>
+                <div class="section__header incomes__header">2. Enter your month additional incomes:</div>
                 <div class="incomes__inner">
                     <div class="income income__realestate">
-                        <label>
-                            <input type="checkbox" name="realestate" value="realestate">
-                            Incomes from realestate
-                        </label>
-                        <input type="text" id="realestate" class="input__value">
+                        <input type="checkbox" class="custom-checkbox" id="realestate-checkbox" name="realestate"
+                            value="realestate">
+                        <label for="realestate-checkbox">Incomes from realestate</label>
+                        <input disabled="disabled" type="text" id="realestate" class="input__value">
                         <div class="units">&#x20AC / month</div>
                     </div>
                     <div class="income income__pension">
-                        <label>
-                            <input type="checkbox" name="pension" value="pension">
-                            Pension
-                        </label>
-                        <input type="text" id="pension" class="input__value">
+                        <input type="checkbox" class="custom-checkbox" id="pension-checkbox" name="pension"
+                            value="pension">
+                        <label for="pension-checkbox">Pension</label>
+                        <input disabled="disabled" type="text" id="pension" class="input__value">
                         <div class="units">&#x20AC / month</div>
                     </div>
                     <div class="income income__securities">
-                        <label>
-                            <input type="checkbox" name="securities" value="securities">
-                            Incomes from securities
-                        </label>
-                        <input type="text" id="securities" class="input__value">
+                        <input type="checkbox" class="custom-checkbox" id="securities-checkbox" name="securities"
+                            value="securities">
+                        <label for="securities-checkbox">Incomes from securities</label>
+                        <input disabled="disabled" type="text" id="securities" class="input__value">
                         <div class="units">&#x20AC / month</div>
                     </div>
                 </div>
                 <div class="note">
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Exercitationem tenetur error iusto
-                    expedita soluta! Non fuga iure, autem itaque corporis quos adipisci atque maiores quaerat, omnis
-                    tempore? Fuga, doloribus necessitatibus.
+                    <div class="btn-more">More information</div>
+                    <div class="note__content">
+                        The tax on income from the rental of real estate is 21%.<br>
+                        The tax on pension accruals is 16%.<br>
+                        A withholding tax of 30% must be deducted from securities income.
+                    </div>
                 </div>
             </section>
 
@@ -73,83 +80,111 @@
                 <div class="section__header dependents__header">3. Do you have supported dependents:</div>
                 <div class="dependents__inner">
                     <div class="dependents__answers">
-                        <div class="dependents__answer answer__active dependents__yes">YES</div>
-                        <div class="dependents__answer dependents__no">NO</div>
+                        <div class="dependents__answer  dependents__yes">YES</div>
+                        <div class="dependents__answer answer__active dependents__no">NO</div>
                     </div>
                     <div class="dependents__count">
                         <div class="count children">
                             <div>Children:</div>
-                            <select id="children" class="children__select">
+                            <select disabled="disabled" id="children" class="children__select">
                                 <option selected value="0">0</option>
                                 <option value="1">1</option>
                                 <option value="2">2</option>
-                                <option value="3">3 and more</option>
+                                <option value="3">3</option>
+                                <option value="4">4 and more</option>
                             </select>
                             <div class="units">persons</div>
                         </div>
-                        <div class="count disabled">
-                            <div>Disabled:</div>
-                            <select id="disabled" class="disabled__select">
+                        <div class="count disabled__under65">
+                            <div>Disabled relatives age under 65:</div>
+                            <select disabled="disabled" id="disabled__under65" class="disabled__select">
                                 <option selected value="0">0</option>
                                 <option value="1">1</option>
                                 <option value="2">2</option>
-                                <option value="3">3 and more</option>
+                                <option value="3">3</option>
+                                <option value="4">4 and more</option>
+                            </select>
+                            <div class="units">persons</div>
+                        </div>
+                        <div class="count disabled__after65">
+                            <div>Disabled relatives age after 65:</div>
+                            <select disabled="disabled" id="disabled__after65" class="disabled__select">
+                                <option selected value="0">0</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4 and more</option>
                             </select>
                             <div class="units">persons</div>
                         </div>
                     </div>
                 </div>
                 <div class="note">
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Exercitationem tenetur error iusto
-                    expedita soluta! Non fuga iure, autem itaque corporis quos adipisci atque maiores quaerat, omnis
-                    tempore? Fuga, doloribus necessitatibus.
+                    <div class="btn-more">More information</div>
+                    <div class="note__content">
+                        If you have one or more dependents, you will receive a tax advantage, namely an increase in the
+                        non-taxable minimum:<br><br>
+                        Children:<br>
+                        1 child: EUR 1 690<br>
+                        2 children: EUR 4 340<br>
+                        3 children: EUR 9 730<br>
+                        4 and more children: EUR 15 740<br><br>
+                        Your ancestors (parents, grandparents, etc.) aged 65 and over:<br>EUR 5 060 per person.<br><br>
+                        Your ancestors (parents, grandparents…) under the age of 65:<br>EUR 1 690 per person.<br>
+
+                    </div>
                 </div>
             </section>
 
-            
-    
-    <section class="other-additionally">
-        <div class="section__header other__header">4. Additionally for full year:</div>
-        <div class="other__inner">
-            <div class="other other__charity">
-                <label>
-                    <input type="checkbox" name="charity" value="charity">
-                    Charitable contributions:
-                </label>
-                <input type="text" id="charity" class="input__value">
-                <div class="units">&#x20AC / year</div>
-            </div>
-            <div class="other other__energy">
-                <label>
-                    <input type="checkbox" name="energy" value="energy">
-                    Spending on energy-saving technologies
-                </label>
-                <input type="text" id="energy" class="input__value">
-                <div class="units">&#x20AC / year</div>
-            </div>
-        </div>
-        <div class="note">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Exercitationem tenetur error iusto
-            expedita soluta! Non fuga iure, autem itaque corporis quos adipisci atque maiores quaerat, omnis
-            tempore? Fuga, doloribus necessitatibus.
-        </div>
-    </section>
-   </form>
 
-<button class="calculate">Сalculate</button>
-<section class="result">
-    <div class="result__text">You have to pay tax for the year in the amount of</div>
-    <input type="text" id="result" class="result__value">
-    <div class="units result__units">&#x20AC</div>
-</section>
 
-    <footer>
-        <div class="note note__footer">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Exercitationem tenetur error iusto
-            expedita soluta! Non fuga iure, autem itaque corporis quos adipisci atque maiores quaerat, omnis
-            tempore? Fuga, doloribus necessitatibus.
-        </div>
-    </footer>
+            <section class="other-additionally">
+                <div class="section__header other__header">4. Additionally for full year:</div>
+                <div class="other__inner">
+                    <div class="other other__charity">
+                        <input class="custom-checkbox" type="checkbox" id="charity__chekbox" name="charity"
+                            value="charity">
+                        <label for="charity__chekbox">Charitable contributions:</label>
+                        <input disabled="disabled" type="text" id="charity" class="input__value">
+                        <div class="units">&#x20AC / year</div>
+                    </div>
+                    <div class="other other__energy">
+                        <input class="custom-checkbox" type="checkbox" id="energy__chekbox" name="energy"
+                            value="energy">
+                        <label for="energy__chekbox">Spending on energy-saving technologies</label>
+                        <input disabled="disabled" type="text" id="energy" class="input__value">
+                        <div class="units">&#x20AC / year</div>
+                    </div>
+                </div>
+                <div class="note">
+                    <div class="btn-more">More information</div>
+                    <div class="note__content">
+                        The tax reduction on donations is 45% of the amount of your donation.
+                        The donation must be at least EUR 40 per calendar year.<br><br>
+                        For spending on energy-saving technologies the tax reduction is 30% of the actual expenses
+                        incurred.
+                        The discount on the house is a maximum of EUR 3 420.
+                    </div>
+                </div>
+            </section>
+        </form>
+
+        <button class="calculate">Сalculate</button>
+        <section class="result">
+            <div class="result__text">You have to pay annual tax in the amount of</div>
+            <input type="text" id="result" class="result__value">
+            <div class="units result__units">&#x20AC</div>
+        </section>
+
+        <footer>
+            <div class="note note__footer">
+
+
+                This form allows you to calculate the approximate amount of the annual tax.<br>
+                For more information visit the page
+                <a href="https://finance.belgium.be/en">Federal Public Service Finance Belgium</a>.
+            </div>
+        </footer>
     </div>
 
 
