@@ -21,7 +21,7 @@
                 <div class="section__header salary__header">1. Enter your month salary:</div>
                 <div class="slidecontainer">
                     <div class="salaryslider">
-                        <input type="range" min="1" max="4000" value="1000" class="slider" id="slider-salary">
+                        <input type="range" min="0" max="4000" value="1000" class="slider" id="slider-salary">
                     </div>
                     <input type="text" id="salary" class="input__value">
                     <div class="units">&#x20AC</div>
@@ -33,8 +33,8 @@
                         the rate of tax you pay.<br><br>
                         The progressive tax rates for 2022 income are:<br>
                         25 % - from EUR 0.01 to EUR 13 540<br>
-                        40 % - from EUR 13 540 to EUR 23 900<br>
-                        45 % - from EUR 23 900 to EUR 41 360<br>
+                        40 % - from EUR 13 541 to EUR 23 900<br>
+                        45 % - from EUR 23 901 to EUR 41 360<br>
                         50 % - more than EUR 41 360.<br><br>
                         Non-taxable amount €9 050 per tax year.</div>
                 </div>
@@ -81,7 +81,7 @@
                 <div class="dependents__inner">
                     <div class="dependents__answers">
                         <div class="dependents__answer  dependents__yes">YES</div>
-                        <div class="dependents__answer answer__active dependents__no">NO</div>
+                        <div class="dependents__answer answer__active__no dependents__no">NO</div>
                     </div>
                     <div class="dependents__count">
                         <div class="count children">
@@ -95,9 +95,9 @@
                             </select>
                             <div class="units">persons</div>
                         </div>
-                        <div class="count disabled__under65">
-                            <div>Disabled relatives age under 65:</div>
-                            <select disabled="disabled" id="disabled__under65" class="disabled__select">
+                        <div class="count disabled__after65">
+                            <div>Disabled relatives age after 65:</div>
+                            <select disabled="disabled" id="disabled__after65" class="disabled__select">
                                 <option selected value="0">0</option>
                                 <option value="1">1</option>
                                 <option value="2">2</option>
@@ -106,9 +106,9 @@
                             </select>
                             <div class="units">persons</div>
                         </div>
-                        <div class="count disabled__after65">
-                            <div>Disabled relatives age after 65:</div>
-                            <select disabled="disabled" id="disabled__after65" class="disabled__select">
+                        <div class="count disabled__under65">
+                            <div>Disabled relatives age under 65:</div>
+                            <select disabled="disabled" id="disabled__under65" class="disabled__select">
                                 <option selected value="0">0</option>
                                 <option value="1">1</option>
                                 <option value="2">2</option>
@@ -142,16 +142,16 @@
                 <div class="section__header other__header">4. Additionally for full year:</div>
                 <div class="other__inner">
                     <div class="other other__charity">
-                        <input class="custom-checkbox" type="checkbox" id="charity__chekbox" name="charity"
+                        <input class="custom-checkbox" type="checkbox" id="charity-checkbox" name="charity"
                             value="charity">
-                        <label for="charity__chekbox">Charitable contributions:</label>
+                        <label for="charity-checkbox">Charitable contributions:</label>
                         <input disabled="disabled" type="text" id="charity" class="input__value">
                         <div class="units">&#x20AC / year</div>
                     </div>
                     <div class="other other__energy">
-                        <input class="custom-checkbox" type="checkbox" id="energy__chekbox" name="energy"
+                        <input class="custom-checkbox" type="checkbox" id="energy-checkbox" name="energy"
                             value="energy">
-                        <label for="energy__chekbox">Spending on energy-saving technologies</label>
+                        <label for="energy-checkbox">Spending on energy-saving technologies</label>
                         <input disabled="disabled" type="text" id="energy" class="input__value">
                         <div class="units">&#x20AC / year</div>
                     </div>
@@ -175,6 +175,7 @@
             <input type="text" id="result" class="result__value">
             <div class="units result__units">&#x20AC</div>
         </section>
+        <div class="warning">! Сheck the correctness of the entered data</div>
 
         <footer>
             <div class="note note__footer">
@@ -188,7 +189,7 @@
     </div>
 
 
-    <script src="script.js"></script>
+    <script src="./js/bundle.js"></script>
 </body>
 
 </html>
