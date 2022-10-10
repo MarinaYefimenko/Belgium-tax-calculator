@@ -336,12 +336,21 @@ select:focus {
     justify-content: start;
 }
 
+.result__text {
+    width: 70%;
+}
+
+.result__sum {
+    display: flex;
+    justify-content: start;
+}
+
 .result__value {
     color: #71a710;
     font-family: 'Frank Ruhl Libre', serif;
     font-size: 20px;
     font-weight: 700;
-    width: 15%;
+    width: 100px;
     height: 25px;
     border: none;
     outline: none;
@@ -385,4 +394,162 @@ footer a {
 
 footer a:hover {
     font-weight: 600;
+}
+
+@media (max-width: 750px) {
+    h1 {
+        font-size: 30px;
+    }
+
+    .main__form {
+        max-width: 600px;
+    }
+
+    .count .units {
+        width: 50%;
+    }
+
+    .result {
+        width: 600px;
+        display: block;
+    }
+
+    .result__text {
+        width: 100%;
+    }
+
+    .warning {
+        width: 600px;
+    }
+
+    .note__footer {
+        margin-left: 30px;
+        padding-top: 10px;
+    }
+}
+
+@media (max-width: 620px) {
+    h1 {
+        font-size: 24px;
+    }
+
+    .main__form {
+        max-width: 450px;
+    }
+
+    .section__header {
+        font-size: 17px;
+    }
+
+    .income {
+        padding-right: 0;
+    }
+
+    .salaryslider {
+        margin-right: 10px;
+    }
+
+    label {
+        font-size: 16px;
+    }
+
+    .units {
+        padding-left: 5px;
+        font-size: 16px;
+        display: inline;
+    }
+
+    .count {
+        font-size: 16px;
+        display: block;
+    }
+
+    .count__name {
+        margin-bottom: 10px;
+    }
+
+    .dependents__count {
+        margin: 30px 0;
+    }
+
+    .result {
+        width: 450px;
+    }
+
+    .result__text {
+        font-size: 17px;
+    }
+
+    .warning {
+        width: 450px;
+    }
+}
+
+@media (max-width: 470px) {
+    h1 {
+        padding: 35px 0;
+    }
+
+    .main__form {
+        max-width: 300px;
+    }
+
+    .section__header {
+        margin-bottom: 25px;
+    }
+
+    .slidecontainer {
+        display: block;
+        margin-bottom: 30px;
+    }
+
+    .salaryslider {
+        margin-bottom: 20px;
+        margin-right: 0;
+        width: 100%;
+    }
+
+    .input__value {
+        display: inline;
+        font-size: 15px;
+        margin-left: 40px;
+        width: 80px;
+    }
+
+
+
+    .note {
+        margin-top: 40px;
+    }
+
+    .income {
+        display: block;
+    }
+
+    label {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .dependents__answer {
+        font-size: 15px;
+    }
+
+    .other {
+        display: block;
+        padding-right: 0;
+    }
+
+    .result {
+        width: 300px;
+    }
+
+    .warning {
+        width: 300px;
+    }
+
+    .note__footer {
+        margin-left: 80px;
+        padding-top: 0px;
+    }
 }

@@ -85,7 +85,7 @@
                     </div>
                     <div class="dependents__count">
                         <div class="count children">
-                            <div>Children:</div>
+                            <div class="count__name">Children:</div>
                             <select disabled="disabled" id="children" class="children__select">
                                 <option selected value="0">0</option>
                                 <option value="1">1</option>
@@ -96,7 +96,7 @@
                             <div class="units">persons</div>
                         </div>
                         <div class="count disabled__after65">
-                            <div>Disabled relatives age after 65:</div>
+                            <div class="count__name">Disabled relatives age after 65:</div>
                             <select disabled="disabled" id="disabled__after65" class="disabled__select">
                                 <option selected value="0">0</option>
                                 <option value="1">1</option>
@@ -107,7 +107,7 @@
                             <div class="units">persons</div>
                         </div>
                         <div class="count disabled__under65">
-                            <div>Disabled relatives age under 65:</div>
+                            <div class="count__name">Disabled relatives age under 65:</div>
                             <select disabled="disabled" id="disabled__under65" class="disabled__select">
                                 <option selected value="0">0</option>
                                 <option value="1">1</option>
@@ -172,8 +172,11 @@
         <button class="calculate">Сalculate</button>
         <section class="result">
             <div class="result__text">You have to pay annual tax in the amount of</div>
-            <input type="text" id="result" class="result__value">
-            <div class="units result__units">&#x20AC</div>
+            <div class="result__sum">
+                <input type="text" id="result" class="result__value">
+                <div class="units result__units">&#x20AC</div>
+            </div>
+
         </section>
         <div class="warning">! Сheck the correctness of the entered data</div>
 
