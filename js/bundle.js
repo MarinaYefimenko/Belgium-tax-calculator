@@ -344,6 +344,10 @@ window.addEventListener('DOMContentLoaded', () => {
     setInputToCheckbox();
     setInputToSlider();
 
+    
+
+    const div = document.querySelector('.slidecontainer');
+
 })
 })();
 
