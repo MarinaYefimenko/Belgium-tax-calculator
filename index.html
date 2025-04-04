@@ -19,19 +19,18 @@
 
         <form class="main__form" action="taxes.php" method="post">
             <section class="salary">
-                <div class="section__header salary__header">1. Enter your month salary:</div>
+                <div class="section__header salary__header">1. Enter your monthly salary:</div>
                 <div class="slidecontainer">
                     <div class="salaryslider">
-                        <input type="range" min="0" max="4000" value="1000" class="slider" id="slider-salary">
+                        <input type="range" min="0" max="5000" value="1000" class="slider" id="slider-salary">
                     </div>
                     <input type="text" id="salary" class="input__value">
                     <div class="units">&#x20AC</div>
                 </div>
                 <div class="note">
                     <div class="btn-more">More information</div>
-                    <div class="note__content">Personal income tax has progressive tax rates. This means that the higher
-                        your income is, the higher
-                        the rate of tax you pay.<br><br>
+                    <div class="note__content">Personal income tax in Belgium has progressive tax rates. 
+                        This means that the higher your income, the higher the tax rate you pay.<br><br>
                         The progressive tax rates for 2022 income are:<br>
                         25 % - from EUR 0.01 to EUR 13 540<br>
                         40 % - from EUR 13 541 to EUR 23 900<br>
@@ -43,12 +42,12 @@
             </section>
 
             <section class="incomes">
-                <div class="section__header incomes__header">2. Enter your month additional incomes:</div>
+                <div class="section__header incomes__header">2. Enter your additional monthly income:</div>
                 <div class="incomes__inner">
                     <div class="income income__realestate">
                         <input type="checkbox" class="custom-checkbox" id="realestate-checkbox" name="realestate"
                             value="realestate">
-                        <label for="realestate-checkbox">Incomes from realestate</label>
+                        <label for="realestate-checkbox">Realestate incomes</label>
                         <input disabled="disabled" type="text" id="realestate" class="input__value">
                         <div class="units">&#x20AC / month</div>
                     </div>
@@ -70,9 +69,9 @@
                 <div class="note">
                     <div class="btn-more">More information</div>
                     <div class="note__content">
-                        The tax on income from the rental of real estate is 21%.<br>
-                        The tax on pension accruals is 16%.<br>
-                        A withholding tax of 30% must be deducted from securities income.
+                        Rental income tax: 21%.<br>
+                        Pension accruals tax: 16%.<br>
+                        Withholding tax on securities income: 30%.
                     </div>
                 </div>
             </section>
@@ -97,7 +96,7 @@
                             <div class="units">persons</div>
                         </div>
                         <div class="count disabled__after65">
-                            <div class="count__name">Disabled relatives age after 65:</div>
+                            <div class="count__name">Disabled relatives (65 and older):</div>
                             <select disabled="disabled" id="disabled__after65" class="disabled__select">
                                 <option selected value="0">0</option>
                                 <option value="1">1</option>
@@ -108,7 +107,7 @@
                             <div class="units">persons</div>
                         </div>
                         <div class="count disabled__under65">
-                            <div class="count__name">Disabled relatives age under 65:</div>
+                            <div class="count__name">Disabled relatives (under 65):</div>
                             <select disabled="disabled" id="disabled__under65" class="disabled__select">
                                 <option selected value="0">0</option>
                                 <option value="1">1</option>
@@ -123,15 +122,14 @@
                 <div class="note">
                     <div class="btn-more">More information</div>
                     <div class="note__content">
-                        If you have one or more dependents, you will receive a tax advantage, namely an increase in the
-                        non-taxable minimum:<br><br>
+                        If you have dependents, you receive a tax benefit through an increase in the non-taxable minimum:<br><br>
                         Children:<br>
                         1 child: EUR 1 690<br>
                         2 children: EUR 4 340<br>
                         3 children: EUR 9 730<br>
                         4 and more children: EUR 15 740<br><br>
-                        Your ancestors (parents, grandparents, etc.) aged 65 and over:<br>EUR 5 060 per person.<br><br>
-                        Your ancestors (parents, grandparents…) under the age of 65:<br>EUR 1 690 per person.<br>
+                        Your ancestors (parents, grandparents, etc.) 65 and older:<br>EUR 5 060 per person.<br><br>
+                        Your ancestors (parents, grandparents…) under 65:<br>EUR 1 690 per person.<br>
 
                     </div>
                 </div>
@@ -140,7 +138,7 @@
 
 
             <section class="other-additionally">
-                <div class="section__header other__header">4. Additionally for full year:</div>
+                <div class="section__header other__header">4. Additional annual expenses:</div>
                 <div class="other__inner">
                     <div class="other other__charity">
                         <input class="custom-checkbox" type="checkbox" id="charity-checkbox" name="charity"
@@ -160,11 +158,8 @@
                 <div class="note">
                     <div class="btn-more">More information</div>
                     <div class="note__content">
-                        The tax reduction on donations is 45% of the amount of your donation.
-                        The donation must be at least EUR 40 per calendar year.<br><br>
-                        For spending on energy-saving technologies the tax reduction is 30% of the actual expenses
-                        incurred.
-                        The discount on the house is a maximum of EUR 3 420.
+                        Tax reduction on donations: 45% of the donated amount (minimum €40 per calendar year)<br><br>
+                        Tax reduction for energy-saving technologies: 30% of actual expenses (maximum €3,420 per property)<br><br>
                     </div>
                 </div>
             </section>
@@ -172,21 +167,21 @@
 
         <button class="calculate">Сalculate</button>
         <section class="result">
-            <div class="result__text">You have to pay annual tax in the amount of</div>
+            <div class="result__text">You have to pay an estimated annual tax of</div>
             <div class="result__sum">
                 <input type="text" id="result" class="result__value">
                 <div class="units result__units">&#x20AC</div>
             </div>
 
         </section>
-        <div class="warning">! Сheck the correctness of the entered data</div>
+        <div class="warning">! Check the accuracy of the entered data</div>
 
         <footer>
             <div class="note note__footer">
 
 
-                This form allows you to calculate the approximate amount of the annual tax.<br>
-                For more information visit the page
+                This form provides an estimate of your annual tax liability.<br>
+                For more details, visit the
                 <a href="https://finance.belgium.be/en">Federal Public Service Finance Belgium</a>.
             </div>
         </footer>
