@@ -23,7 +23,7 @@ function calcTax() {
         
         //constants: year 2024
             //https://fin.belgium.be/en/private-individuals/tax-return/income/tax-rates
-        let baseSum = 10570,
+        let baseSumInit = 10570,
             point25 = 15820,
             point40 = 27920,
             point45 = 48320,
@@ -50,7 +50,7 @@ function calcTax() {
 
     // Base Sum
     function calcBaseSum() {
-        let baseSum = baseSum;
+        let baseSum = baseSumInit;
 
         // Disabled relatives
         switch (children.selectedOptions[0].value) {
