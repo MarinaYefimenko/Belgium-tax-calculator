@@ -11,7 +11,23 @@ function calcTax() {
         btnCalc = document.querySelector('.calculate'),
         result = document.querySelector('#result'),
         warning = document.querySelector('.warning');
-
+        
+        //constants: year 2024
+            //https://fin.belgium.be/en/private-individuals/tax-return/income/tax-rates
+        let baseSum = 10570,
+            point25 = 15820,
+            point40 = 27920,
+            point45 = 48320,
+            //https://fin.belgium.be/nl/particulieren/belastingaangifte/persoonlijke-situatie/personen-ten-laste/kinderen
+            kids1 = 1920,
+            kids2 = 4950,
+            kids3 = 11090,
+            kids4 = 17940,
+            //https://fin.belgium.be/nl/particulieren/belastingaangifte/persoonlijke-situatie-gezinssituatie/personen-ten-laste/andere#--8-trigger-0
+            ageOver65 = 5770,
+            ageUnder65 = 1920;
+            //https://fin.belgium.be/nl/particulieren/belastingvoordelen/giften
+    
     // Incomes
     function calcAddTax() {
         let addTax = 0;
@@ -25,28 +41,28 @@ function calcTax() {
 
     // Base Sum
     function calcBaseSum() {
-        let baseSum = 9050;
+        let baseSum = baseSum;
 
         // Disabled relatives
         switch (children.selectedOptions[0].value) {
             case '0':
                 break;
             case '1':
-                baseSum += 1690;
+                baseSum += kids1;
                 break;
             case '2':
-                baseSum += 4340;
+                baseSum += kids2;
                 break;
             case '3':
-                baseSum += 9730;
+                baseSum += kids3;
                 break;
             case '4':
-                baseSum += 15740;
+                baseSum += kids4;
                 break;
         }
 
-        baseSum += +after65.selectedOptions[0].value * 5060;
-        baseSum += +under65.selectedOptions[0].value * 1690;
+        baseSum += +after65.selectedOptions[0].value * ageOver65;
+        baseSum += +under65.selectedOptions[0].value * ageUnder65;
 
         // Additionaly to BaseSum
         if (+charity.value >= 40) {
@@ -70,23 +86,23 @@ function calcTax() {
         if (income <= 0) {
             return 0;
         }
-        if (income >= 13540) {
-            income -= 13540;
-            incomeTax += 13540 * 0.25;
+        if (income >= point25) {
+            income -= point25;
+            incomeTax += point25 * 0.25;
         } else {
             incomeTax += income * 0.25;
             return incomeTax;
         }
-        if (income >= (23900 - 13540)) {
-            income -= (23900 - 13540);
-            incomeTax += (23900 - 13540) * 0.4;
+        if (income >= (point40 - point25)) {
+            income -= (point40 - point25);
+            incomeTax += (point40 - point25) * 0.4;
         } else {
             incomeTax += income * 0.4;
             return incomeTax;
         }
-        if (income >= (41360 - 23900)) {
-            income -= (41360 - 23900);
-            incomeTax += (41360 - 23900) * 0.45;
+        if (income >= (point45 - point40)) {
+            income -= (point45 - point40);
+            incomeTax += (point45 - point40) * 0.45;
         } else {
             incomeTax += income * 0.45;
             return incomeTax;
